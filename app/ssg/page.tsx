@@ -18,7 +18,7 @@ export const generateStaticParams = async () => {
     createdAt: post.createdAt,
   }));
 };
-export const revalidate = 0;
+export const revalidate = 60;
 export default async function Index() {
   // ─── Global Variable ────────────────────────────────────────────────────────────
   const posts: postType[] = await getPosts();
