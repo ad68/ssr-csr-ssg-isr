@@ -14,7 +14,9 @@ export const getPosts = async () => {
         "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
         Pragma: "no-cache",
       },
-      timeout: 5000, // زمان انتظار اختیاری
+      params: {
+        _: new Date().getTime(), // افزودن پارامتر تصادفی برای جلوگیری از کش
+      },
     });
     return response.data;
   } catch (error) {
