@@ -9,9 +9,8 @@ type postType = {
   avatar: string;
   id: string;
 };
-// تولید صفحات استاتیک برای هر پست
 
-export const revalidate = 60;
+/* export const revalidate = 60; */
 export default async function Index() {
   // ─── Global Variable ────────────────────────────────────────────────────────────
   const posts: postType[] = await getPosts();
