@@ -9,6 +9,15 @@ type postType = {
   avatar: string;
   id: string;
 };
+// تولید صفحات استاتیک برای هر پست
+export const generateStaticParams = async () => {
+  const posts = await getPosts();
+  return posts.map((post) => ({
+    id: post.id,
+    name: post.name,
+    createdAt: post.createdAt,
+  }));
+};
 export const revalidate = 0;
 export default async function Index() {
   // ─── Global Variable ────────────────────────────────────────────────────────────
