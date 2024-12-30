@@ -27,15 +27,15 @@ export default async function Index() {
   //
   return (
     <>
-      <ul>
+      <section>
         {posts?.map((item: postType) => (
-          <>
-            <li>{item?.id}</li>
-            <li>{item?.name}</li>
-            <li>{item?.createdAt}</li>
-          </>
+          <section key={item?.id}>
+            <section>{item?.id}</section>
+            <section>{item?.name}</section>
+            <section>{item?.createdAt}</section>
+          </section>
         ))}
-      </ul>
+      </section>
     </>
   );
 }
