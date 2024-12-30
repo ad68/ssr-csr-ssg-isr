@@ -12,7 +12,7 @@ type postType = {
 };
 export const fetchCache = "force-no-store";
 export default async function Index() {
-  // ─── Global Variable ────────────────────────────────────────────────────────────
+  // ───-- Global Variable ────────────────────────────────────────────────────────────
   const posts: postType[] = await getPosts();
   // ─── States ─────────────────────────────────────────────────────────────────────
 
