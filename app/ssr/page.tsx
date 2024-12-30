@@ -10,7 +10,7 @@ type postType = {
   avatar: string;
   id: string;
 };
-export const revalidate = false;
+export const fetchCache = "force-no-store";
 export default async function Index() {
   // ───-- Global Variable ────────────────────────────────────────────────────────────
   const posts: postType[] = await getPosts();
